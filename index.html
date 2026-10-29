@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <title>JEE | Learning Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+
+    <!-- LOCK SCREEN -->
+    <section id="lockScreen" class="screen">
+      <header class="topbar">
+        <div class="brand">
+          <div class="logo">J</div>
+          <div>
+            <h2>JEE</h2>
+            <p>Learning Portal</p>
+          </div>
+        </div>
+        <button id="themeToggle" class="icon-button" aria-label="Toggle theme">☾</button>
+      </header>
+
+      <div class="lock-content">
+        <div class="big-logo">JEE<span>.</span></div>
+        <h1>Your learning space.</h1>
+        <p class="muted">Study. Practice. Connect.</p>
+
+        <form id="loginForm">
+          <label for="password">Access password</label>
+          <input
+            id="password"
+            type="password"
+            placeholder="Enter password"
+            autocomplete="off"
+            required
+          >
+          <button class="primary" type="submit">Continue <span>→</span></button>
+        </form>
+
+        <p id="loginMessage" class="status" aria-live="polite"></p>
+      </div>
+
+      <footer>PERSONAL LEARNING PORTAL</footer>
+    </section>
+
+    <!-- CHAT SCREEN -->
+    <section id="chatScreen" class="screen hidden">
+      <header class="chat-header">
+        <button id="backButton" class="icon-button" aria-label="Back">←</button>
+        <div class="avatar">J</div>
+        <div class="chat-title">
+          <h2 id="chatTitle">Private Chat</h2>
+          <p id="chatSubtitle">Personal conversation</p>
+        </div>
+        <button id="chatMenu" class="icon-button" aria-label="Chat options">⋮</button>
+      </header>
+
+      <div id="chatMessages" class="messages"></div>
+
+      <form id="messageForm" class="composer">
+        <label for="mediaInput" class="attach" title="Attach photo or video">＋</label>
+        <input id="mediaInput" type="file" accept="image/*,video/*" hidden>
+        <input id="messageInput" type="text" placeholder="Message..." autocomplete="off">
+        <button class="send" type="submit" aria-label="Send message">➤</button>
+      </form>
+      <p id="chatStatus" class="chat-status"></p>
+    </section>
+
+    <!-- JEE STUDY PORTAL -->
+    <section id="studyScreen" class="screen hidden">
+      <header class="topbar">
+        <div class="brand">
+          <div class="logo">J</div>
+          <div>
+            <h2>JEE</h2>
+            <p>Study Dashboard</p>
+          </div>
+        </div>
+        <button id="studyBack" class="icon-button" aria-label="Lock">↩</button>
+      </header>
+
+      <div class="study-content">
+        <p class="eyebrow">YOUR WORKSPACE</p>
+        <h1>Study materials.</h1>
+        <p class="muted">Your subjects, notes and modules in one place.</p>
+
+        <div class="subject-grid">
+          <article class="subject-card">
+            <span class="subject-icon">Φ</span>
+            <h3>Physics</h3>
+            <p>Concepts and practice</p>
+          </article>
+          <article class="subject-card">
+            <span class="subject-icon">⚗</span>
+            <h3>Chemistry</h3>
+            <p>Notes and revision</p>
+          </article>
+          <article class="subject-card">
+            <span class="subject-icon">∑</span>
+            <h3>Mathematics</h3>
+            <p>Formulas and modules</p>
+          </article>
+        </div>
+
+        <div class="materials">
+          <h2>Study library</h2>
+          <p class="muted">Your PDF files will appear here.</p>
+          <label class="upload-button" for="pdfInput">＋ Add PDF files</label>
+          <input id="pdfInput" type="file" accept="application/pdf,.pdf" multiple hidden>
+          <div id="pdfList"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
